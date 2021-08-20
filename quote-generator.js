@@ -1,3 +1,8 @@
+function multiFunc() {
+    quoteGenerator();
+    changeColor();
+}
+
 function quoteGenerator() {
     const quotes = [
         {"quote":"Life isn’t about getting and having, it’s about giving and being.","author":"Kevin Kruse"},
@@ -104,11 +109,29 @@ function quoteGenerator() {
         {"quote":"If you can dream it, you can achieve it.","author":"Zig Ziglar"}
         ];
 
-    let quotesIdx = Math.floor(Math.random() * (quotes.length + 1));
+    let quotesIdx = Math.floor(Math.random() * (quotes.length));
     
     document.getElementById('text').textContent = quotes[quotesIdx]["quote"];
     document.getElementById('author').textContent = quotes[quotesIdx]["author"];
     document.getElementById( 'tweet-quote' ).href="https://twitter.com/intent/tweet/?text="+"\""+quotes[quotesIdx]["quote"]+"\" "+quotes[quotesIdx]["author"]+".";
 };
 
-//console.log(quoteGenerator());
+function changeColor() {
+    const colors = [
+        '#16a085',
+        '#27ae60',
+        '#2c3e50',
+        '#f39c12',
+        '#e74c3c',
+        '#9b59b6',
+        '#FB6964',
+        '#342224',
+        '#472E32',
+        '#73A857'
+      ];
+
+    let colorsIdx = Math.floor(Math.random() * (colors.length));
+    document.getElementById('page').style.setProperty('--bg-color', colors[colorsIdx]);
+    document.getElementById('text').style.setProperty('--quote-color', colors[colorsIdx]);
+    document.getElementById('author').style.setProperty('--quote-color', colors[colorsIdx]);
+};
