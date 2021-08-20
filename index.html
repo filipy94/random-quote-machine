@@ -5,28 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <script src="quote-generator.js"></script>
     <title>Quote Generator</title>
 </head>
-<body class="container-fluid" onload="quoteGenerator()">
+<body class="container-fluid" onload="multiFunc()" id="page">
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <div id="wrapper">
-        <div id="quote-box" class="well">
-            <h1 id="text"></h1>
-            <p id="author"></p>
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="https://twitter.com/intent/tweet?text=" id="tweet-quote" target="_blank">Tweet</a>
-                </div>
-                <div class="col-xs-8"></div>
-                <div class="col-xs-2">
-                    <button id="new-quote" onclick="quoteGenerator()">New Quote</button>
-                </div>
+        <div id="quote-box">
+            <h2><i id="left-quote" class="fa fa-quote-left"></i> <span id="text"></span></h2>
+            <h3 id="author"></h3>
+            <div class="buttons">
+                <a href="https://twitter.com/intent/tweet?text=" id="tweet-quote" target="_blank"><button class="btn"><i class="fa fa-twitter fa-2x"></i></button></a>
+                <button class="btn" id="new-quote" onclick="multiFunc()">New Quote</button>
             </div>
         </div>
         <footer>
-            <p>by <a href="https://github.com/filipy94">filipy94</a></p>
+            <p>by <a id="profile" href="https://github.com/filipy94">filipy94</a></p>
         </footer>
     </div>
 </body>

@@ -1,25 +1,71 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #333;
-    color: #333;
+:root {
+    --bg-color: #333;
+    --quote-color: #333;
+    --color: rgb(226, 218, 218);    
 }
 
 div {
     position: relative;
 }
-
-#wrapper {
-    max-width: 65vw;
-}
-
 footer {
     text-align: center;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
+p {
+    color: var(--color);
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.fa-twitter {
+    color: var(--color);
+}
+#quote-left {
+    color: var(--quote-color);
+}
+.btn {
+    height: 8vh;
+    text-align: center;
+}
+
+#page, #new-quote, .btn {
+    background-color: var(--bg-color);
+}
+#text, #author {
+    color: var(--quote-color);
+}
+#quote-box {
+    display: flex;
+    background-color: rgb(226, 218, 218);
+    flex-direction: column;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 15px;
+    text-justify: inter-word;
+}
+#author {
+    font-style: italic;
+    display: flex;
+    justify-content: flex-end;
+}
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#wrapper {
+    max-width: 65vw;
+}
+#profile {
+    text-decoration: none;
+    color: var(--color);
+}
+#new-quote {
+    color: var(--color);
+}
+
+
+
+
